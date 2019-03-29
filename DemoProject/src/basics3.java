@@ -20,7 +20,7 @@ public class basics3 {
 	public void getData() throws IOException
 	{
 		
-		FileInputStream fis =new FileInputStream("C:\\Users\\oxana\\Desktop\\Java\\eclipse_workspace\\DemoProject\\src\\files\\env.properties"); 
+		FileInputStream fis =new FileInputStream("C:\\Users\\oxana\\git\\repository\\LearningApi\\DemoProject\\src\\files\\env.properties");
 		prop.load(fis);
 		//prop.get("HOST");
 	}
@@ -59,7 +59,7 @@ public class basics3 {
 		RestAssured.baseURI = prop.getProperty("HOST");
 		
 		Response res = given().
-		queryParam("key", "qaclick123").body(b).
+		queryParam("key", prop.getProperty("KEY")).body(b).
 		when().
 		post("/maps/api/place/add/json"). //we added a new place id
 		then().assertThat().statusCode(200).and().
@@ -79,7 +79,7 @@ public class basics3 {
 		
 		//Task 3 -place this place_id into delete request
 		
-		given().queryParam("key", "qaclick123").body("{\"place_id\": \"" + placeid + "\" }").
+		given().queryParam("key", prop.getProperty("KEY")).body("{\"place_id\": \"" + placeid + "\" }").
 		when().
 		post("/maps/api/place/delete/json"). //we deleted that created new place
 		then().assertThat().statusCode(200).and().
