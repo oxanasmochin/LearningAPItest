@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="2291" started-at="2019-03-29T11:31:13Z" finished-at="2019-03-29T11:31:16Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="2291" started-at="2019-03-29T11:31:13Z" finished-at="2019-03-29T11:31:16Z">
+      <class name="basics3">
+        <test-method status="PASS" signature="getData()[pri:0, instance:basics3@6b09bb57]" name="getData" is-config="true" duration-ms="10" started-at="2019-03-29T12:31:13Z" finished-at="2019-03-29T12:31:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getData -->
+        <test-method status="PASS" signature="AddandDelete()[pri:0, instance:basics3@6b09bb57]" name="AddandDelete" duration-ms="2271" started-at="2019-03-29T12:31:13Z" finished-at="2019-03-29T12:31:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddandDelete -->
+      </class> <!-- basics3 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
